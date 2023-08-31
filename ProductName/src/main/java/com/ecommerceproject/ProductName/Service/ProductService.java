@@ -1,7 +1,6 @@
 package com.ecommerceproject.ProductName.Service;
 
-import com.ecommerceproject.ProductName.ProductNameApplication;
-import com.ecommerceproject.ProductName.payload.ProductDto;
+import com.ecommerceproject.ProductName.Payload.ProductDto;
 
 import java.util.List;
 

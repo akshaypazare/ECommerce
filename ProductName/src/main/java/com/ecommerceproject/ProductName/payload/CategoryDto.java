@@ -1,4 +1,4 @@
-package com.ecommerceproject.ProductName.payload;
+package com.ecommerceproject.ProductName.Payload;
 
 import lombok.Data;
 
@@ -9,3 +9,4 @@ public class CategoryDto {
     private String name;
 
 }
+

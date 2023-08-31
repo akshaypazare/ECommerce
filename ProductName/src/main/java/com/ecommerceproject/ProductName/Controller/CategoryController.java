@@ -1,7 +1,7 @@
 package com.ecommerceproject.ProductName.Controller;
 
+import com.ecommerceproject.ProductName.Payload.CategoryDto;
 import com.ecommerceproject.ProductName.Service.CategoryService;
-import com.ecommerceproject.ProductName.payload.CategoryDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,8 +16,8 @@ public class CategoryController {
     private CategoryService  categoryService;
 
     @PostMapping
-    public ResponseEntity<CategoryDto> createCategory(@RequestBody CategoryDto categoryDto){
+    public ResponseEntity<CategoryDto> createCategory(@RequestBody CategoryDto categoryDto) {
         categoryService.createCategory(categoryDto);
-        
+
     }
 }

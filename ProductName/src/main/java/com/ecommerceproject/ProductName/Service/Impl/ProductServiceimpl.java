@@ -2,9 +2,9 @@ package com.ecommerceproject.ProductName.Service.Impl;
 
 import com.ecommerceproject.ProductName.Entity.Product;
 import com.ecommerceproject.ProductName.Exception.ResourceNotFoundException;
+import com.ecommerceproject.ProductName.Payload.ProductDto;
 import com.ecommerceproject.ProductName.Repository.ProductRepo;
 import com.ecommerceproject.ProductName.Service.ProductService;
-import com.ecommerceproject.ProductName.payload.ProductDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -66,6 +66,7 @@ public class ProductServiceimpl implements ProductService {
         return mapToDto(product1);
 
     }
+
 
     private ProductDto mapToDto(Product product) {
         ProductDto productDto=new ProductDto();

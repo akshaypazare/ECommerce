@@ -21,5 +21,7 @@ public class Product {
     @Column(name = "productCategory",nullable = false)
     @ManyToOne(fetch = FetchType.EAGER)
     private Category category;
+    @Column(name="productPrice")
+    private int price;
 
 }

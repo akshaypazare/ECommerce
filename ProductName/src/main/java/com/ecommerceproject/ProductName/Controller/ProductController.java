@@ -1,8 +1,7 @@
 package com.ecommerceproject.ProductName.Controller;
 
-import com.ecommerceproject.ProductName.Service.Impl.ProductServiceimpl;
+import com.ecommerceproject.ProductName.Payload.ProductDto;
 import com.ecommerceproject.ProductName.Service.ProductService;
-import com.ecommerceproject.ProductName.payload.ProductDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +15,8 @@ public class ProductController {
 
     @Autowired
     private ProductService productService;
+
+
 
     @PostMapping
     public ResponseEntity<ProductDto> createProduct(@RequestBody ProductDto productDto){

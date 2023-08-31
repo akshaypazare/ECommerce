@@ -1,5 +1,8 @@
 package com.ecommerceproject.ProductName.Payload;
 
+import lombok.Data;
+
+@Data
 public class BuyProductDto {
     private Long id;
     private String name;
