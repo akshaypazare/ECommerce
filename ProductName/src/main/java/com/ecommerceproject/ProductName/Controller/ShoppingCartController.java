@@ -24,9 +24,6 @@ public class ShoppingCartController {
     @Autowired
     private ProductService productService;
 
-
-
-
     @PostMapping("/add")
     @ApiOperation(
             value = "Add a product to the shopping cart",

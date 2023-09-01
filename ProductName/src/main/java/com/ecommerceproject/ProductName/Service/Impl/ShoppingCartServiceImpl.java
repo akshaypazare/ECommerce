@@ -89,45 +89,6 @@ public List<CartItemDto> getProductsInCart() {
         productRepo.delete(product);
     }
 
-    public ProductDto updateProductQuantityInCart(long cartItemId, int quantity) {
-        // Retrieve the shopping cart (you need to implement this)
-        ShoppingCart cart = ShoppingCartRepository.findById(cartId);
-
-        // Find the cart item by ID
-        CartItem cartItem = cart.getCartItemById(cartItemId);
-
-        // Update the cart item's quantity
-        cartItem.setQuantity(quantity);
-
-        // Calculate the updated total price, if needed
-        cart.calculateTotalPrice();
-
-        // Save the updated cart (you need to implement this)
-        ShoppingCartRepository.save(cart);
-
-        // Find the product associated with the cart item
-        Product product = cartItem.getProduct();
-
-        // Convert the product to a DTO
-        ProductDto productDto = convertToDto(product);
-        productDto.setQuantity(cartItem.getProduct().getId());
-
-        return productDto;
-    }
-    private ProductDto mapToProductDto(Product product, CartItem cartItem) {
-        ProductDto productDto = new ProductDto();
-        productDto.setQuantity(cartItem.getQuantity());
-        // Set other properties of productDto as needed
-        return productDto;
-    }
-
-
-
-
-
-
-
-
     private Product getProductFromDatabase(Long productId) {
         Optional<Product> productOptional = productRepo.findById(productId);
         return productOptional.orElse(null);
